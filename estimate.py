@@ -32,12 +32,12 @@ class TestMC(unittest.TestCase):
 def wallis(n):
     i = 1
     val = 1
-    tot = 0
+    tot = 1
     while i <= n:
-        val = 2*((4 * i * i) / ((4 * i * i) - 1))
-        tot = tot + val
+        val = (4 * i * i) / ((4 * i * i) - 1)
+        tot = tot*val
         i = i + 1
-    return tot
+    return 2*tot
 def monte_carlo(n):
     i=1
     inspoint = 0
